@@ -1,0 +1,85 @@
+\documentclass[final]{fhnwreport}         %[mode] = draft or final
+\input{fhnwheader}                        %loads all packages, definitions and settings	
+
+%%%%% Bibliographie entweder im IEEE- oder im APA-Stil:
+%\usepackage[style=ieee,urldate=comp,backend=biber]{biblatex}
+\usepackage[style=apa,urldate=comp,backend=biber]{biblatex}
+%%%%%
+\addbibresource{literature/beispiel_bib.bib}
+											
+\title{Autonomous Beer-Cooler}  %Project Title
+\author{Semesterarbeit mc}    %Document Type => Technical Report, ...
+\date{Muttenz, August 20yy}               %Place and Date
+
+\begin{document}
+
+\pagenumbering{roman}	
+
+%%---TITLEPAGE---------------------------------------------------------------------------
+\selectlanguage{ngerman}                  %ngerman or english
+\maketitle
+
+\vfill
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=4cm]{knauber.jpg}
+\end{figure}
+
+\vfill
+
+\begin{tabular}{@{}p{5cm} l}
+Studentin/Student          &    Max Knauber\\
+                           &    Matthias Gass\\[2ex]
+                           &    Fabian Schenker\\[2ex]
+Expertin/Experte           &    ?\\[2ex]
+Fachbetreuer/in            &    Silvan Wirth\\[2ex]
+Projektnummer              &    YXYX-S\\[4ex]
+\multicolumn{2}{@{}l}{Fachhochschule Nordwestschweiz, Hochschule für Technik}
+\end{tabular}
+
+\vspace*{4ex}
+% Logo
+\begin{tikzpicture}[remember picture,overlay,every node/.style={anchor=north west}]
+  \node at (current page.north west) [xshift=0.5cm, yshift=-0.5cm] {\includegraphics[width=20cm]{logo_mit_schulen.png}};
+\end{tikzpicture}
+
+\clearpage
+			
+%%---ABSTRACT----------------------------------------------------------------------------
+\selectlanguage{ngerman}				%ngerman or english
+\thispagestyle{empty}
+\include{sections/abstract}
+
+%%---TABLE OF CONTENTS-------------------------------------------------------------------	
+\selectlanguage{ngerman}				%ngerman or english
+\tableofcontents
+\clearpage
+
+\listoffigures
+\listoftables
+\cleardoublepage
+
+%%---TEXT--------------------------------------------------------------------------------
+\pagenumbering{arabic}
+\include{sections/einleitung}
+\include{sections/vorstudie}
+\include{sections/this}
+\include{sections/that}
+\include{sections/schluss}
+
+%%---BIBLIOGRAPHY------------------------------------------------------------------------
+{\sloppypar
+\printbibliography[heading=bibintoc, title=Quellenverzeichnis]
+}
+
+%%---APPENDIX----------------------------------------------------------------------------
+\include{sections/ehrlichkeit}
+\include{sections/appendix}
+
+%%---NOTES for DEBUG---------------------------------------------------------------------
+%\newpage
+%\listoftodos[\section{Todo-Notes}]
+%\clearpage
+
+\end{document}
