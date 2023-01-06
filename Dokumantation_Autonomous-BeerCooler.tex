@@ -1,4 +1,4 @@
-\documentclass[final]{fhnwreport}         %[mode] = draft or final
+\documentclass[draft]{fhnwreport}         %[mode] = draft or final
 \input{fhnwheader}                        %loads all packages, definitions and settings	
 
 %%%%% Bibliographie entweder im IEEE- oder im APA-Stil:
@@ -8,8 +8,8 @@
 \addbibresource{literature/beispiel_bib.bib}
 											
 \title{Autonomous Beer-Cooler}  %Project Title
-\author{Semesterarbeit mc}    %Document Type => Technical Report, ...
-\date{Muttenz, August 20yy}               %Place and Date
+\author{Semesterarbeit}    %Document Type => Technical Report, ...
+\date{Muttenz, Januar 2023}               %Place and Date
 
 \begin{document}
 
@@ -39,17 +39,19 @@ Fachbetreuer            &    Silvan Wirth\\[2ex]
 \vspace*{4ex}
 % Logo
 \begin{tikzpicture}[remember picture,overlay,every node/.style={anchor=north west}]
-  \node at (current page.north west) [xshift=0.5cm, yshift=-0.5cm] {\includegraphics[width=20cm]{logo_mit_schulen.png}};
+  \node at (current page.north west) [xshift=0.5cm, yshift=-0.5cm] {\includegraphics[width=20cm]{logo_neu.pdf}};
 \end{tikzpicture}
 
 \clearpage
 			
-%%---ABSTRACT----------------------------------------------------------------------------
+%%---ABSTRACT-------------------------------------------------------------------
 \selectlanguage{ngerman}				%ngerman or english
 \thispagestyle{empty}
-\include{sections/abstract}
+\include{sections/00_zusammenfassung}
+\include{sections/01_VorwortDank}
+\include{sections/02_Rahmenbedingungen}
 
-%%---TABLE OF CONTENTS-------------------------------------------------------------------	
+%%---TABLE OF CONTENTS-----------------------------------------------------------	
 \selectlanguage{ngerman}				%ngerman or english
 \tableofcontents
 \clearpage
@@ -58,7 +60,7 @@ Fachbetreuer            &    Silvan Wirth\\[2ex]
 \listoftables
 \cleardoublepage
 
-%%---TEXT--------------------------------------------------------------------------------
+%%---TEXT--------------------------------------------------------------------
 \pagenumbering{arabic}
 \include{sections/einleitung}
 \include{sections/vorstudie}
@@ -66,14 +68,14 @@ Fachbetreuer            &    Silvan Wirth\\[2ex]
 \include{sections/that}
 \include{sections/schluss}
 
-%%---BIBLIOGRAPHY------------------------------------------------------------------------
+%%---BIBLIOGRAPHY-------------------------------------------------------
 {\sloppypar
 \printbibliography[heading=bibintoc, title=Quellenverzeichnis]
 }
 
-%%---APPENDIX----------------------------------------------------------------------------
-\include{sections/ehrlichkeit}
-\include{sections/appendix}
+%%---APPENDIX----------------------------------------------------------
+\include{sections/98_Ehrlichkeit}
+\include{sections/99_Appendix}
 
 %%---NOTES for DEBUG---------------------------------------------------------------------
 %\newpage
