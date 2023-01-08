@@ -1,4 +1,4 @@
-\documentclass[draft]{fhnwreport}         %[mode] = draft or final (class, fhnwreport)
+\documentclass[draft]{fhnwreport}         %[mode] = draft or final 
 \input{fhnwheader}                        %loads all packages, definitions and settings	
 
 %%%%% Bibliographie entweder im IEEE- oder im APA-Stil:
@@ -45,22 +45,26 @@ Fachbetreuer            &    Silvan Wirth\\[2ex]
 \clearpage
 			
 %%---ABSTRACT-------------------------------------------------------------------
+\pagestyle{plain}
 \selectlanguage{ngerman}				%ngerman or english
-\thispagestyle{empty}
+
 \include{sections/00_zusammenfassung}
 \include{sections/01_VorwortDank}
 \include{sections/02_Rahmenbedingungen}
 
 %%---TABLE OF CONTENTS-----------------------------------------------------------	
+\pagestyle{empty}
+
 \selectlanguage{ngerman}				%ngerman or english
 \tableofcontents
 \clearpage
 
 \listoffigures
 \listoftables
-\cleardoublepage
+\clearpage
 
 %%---TEXT--------------------------------------------------------------------
+\pagestyle{plain}
 \pagenumbering{arabic}
 \include{sections/03_einleitung}
 \include{sections/04_Rahmenbedingungen}
