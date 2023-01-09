@@ -1,3 +1,16 @@
 \section{Schlussbemerkungen}
 
-\lipsum[28]
+Hier ist deutlich hervorzuheben, dass uns eines unserer Hauptziele, das autonome Folgen, nicht gelungen ist. Der Roboter fährt zwar selbstständig, aber nicht dort, wo er hinsoll, und er aktualisiert die Position des Smartphone-GPS auch nicht. Er fährt zum Punkt, an dem die Verbindung hergestellt wurde und bleibt dann aber dort. Wenn man ihn versetzt, fährt er wieder an den Punkt zurück, aber mehr nicht.\\
+\\
+Um uns den Transport und die Kontrolle zu erleichtern, entstand aus einem Versuch der Blynk-App zu entkommen ein Joystick in der Dabble-App, welcher hervorragend funktioniert und mit welchem wir den Betrieb bis auf weiteres empfehlen würden. Leider erlaubt die Dabble App nicht mehr als seine Kommunikation über das UART-Protokoll. Da unser GPS-Modul auf einem für UART ausgelegten Board zu uns kam, hätten wir ohne Erfolgsgarantie die Pins am Chip um löten müssen, was uns ein zu grosses Risiko darstellte.\\
+\\
+Auf das Design des Roboters sind wir hingegen stolz. Wir konnten sehr viel 3D-Drucken, was alle 3 Teilnehmer zu ihren Hobbys zählen, und hatten auch sonst viel Spass beim Zusammenbau.\\
+\\
+Abschliessend lässt sich sagen, dass die prognostizierte Schwachstelle der Software sich bewahrheitet hat. \\
+\\
+Die Blynk App, auf die wir Aufgrund der Vorlage in gewissem Masse gebunden waren, war schlicht nicht stabil genug für unsere Voraussetzungen. Zum einen hatte sie stets Probleme die Bluetooth-Verbindung zuverlässig aufrecht zu erhalten, zum anderen ist die genaue Funktionsweise der App und ihrer Bibliotheken extrem schwer zu durchschauen. Eventuell wäre auch ein Wechsel auf eine andere Datenübertragungsmethode wie ein Wifi-Modul eine Option gewesen. Hier hätten wir früher reagieren können, als wir bemerkten, das es mit der Blynk App nicht wie gewünscht funktionieren wird. Als Lösung hätte man womöglich einen zweiten Arduino mit Bluetooth und GPS Modul verwenden können. Diesen hätte dann der Benutzer auf sich getragen und der Arduino hätte über das BT Modul mit dem Arduino des Roboters kommunizieren können.\\
+\\
+Die Sensoren stellten uns vor ein weiteres grosses Problem, da der Kompass sich als ausgesprochen sensibel herausstellte und das GPS-Modul an Präzision zu wünschen übrigliess. Eine anfängliche Idee das Ganze über einen Apple-Airtag ähnliches Gerät aufzusetzen oder die Followfunktion mittels Objekterkennung zu gestalten, hätte uns eventuell. zu mehr Erfolg verholfen.\\
+\\
+Wir sind trotzdem stolz auf unsere Leistung und haben es am Ende geschafft, zumindest die Rückenbelastung durch das Schleppen einer Kühlbox und anderer Gegenstände zu mindern. Die Motoren verfügen über ausreichend Drehmoment, um den voll beladenen Roboter über eine Wiese und abschüssiges Gelände hochzubewegen und die Kühlleistung reicht aus um 3 Stunden Kühlung zu gewährleisten. 
+
