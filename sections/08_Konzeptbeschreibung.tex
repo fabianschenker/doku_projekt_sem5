@@ -1,11 +1,10 @@
 \section{Konzeptbeschreibung}
 
 \subsection{Systembeschreibung}
-Das System besteht zentral aus einem Mikrokontroller, welcher sich über Bluetooth mit einer App auf dem Smartphone verbinden kann. Von dieser App erhält der Mikrokontroller GPS-Koordinaten, welche er dank eines eigenen GPS-Sensors vergleichen kann. Über einen Kompass und diese beiden Koordinatensätze ist das System in der Lage die verbauten Motoren so anzusteuern, dass die Distanz zwischen den beiden Koordinatensätze sich verringert. \\
+Das System besteht zentral aus einem Mikrokontroller, welcher sich über Bluetooth mit einer App auf dem Smartphone verbinden lässt. Von dieser App erhält der Mikrokontroller GPS-Koordinaten, welche er dank eines eigenen GPS-Sensors vergleichen kann. Über einen Kompass und diese beiden Koordinatensätze ist das System in der Lage die verbauten Motoren so anzusteuern, dass die Distanz zwischen den beiden Koordinatensätze sich verringert. \\
 \\
-Des Weiteren verfügt das System über eine Box, welche für mindestens 12 Bierdosen à 0.5L Platz hat und diese aktiv kühlt.\\
-\\
-Die Energieversorgung wird über eine verbaute Batterie und eine Custom-Spannungsversorgung gewährleistet.\\
+Des Weiteren verfügt das System über eine Box, welche für mindestens 12 Bierdosen à 0.5L Platz hat und diese aktiv kühlt.\\ \\
+Die Energieversorgung wird über einen verbauten Akku und eine Custom-Spannungsversorgung gewährleistet. Es handelt sich um einen LiPo Akku mit einer Kapazität von 16000 mAh.\\
 \\
 Über eine Bluetooth Verbindung soll der Roboter GPS Koordinaten vom Smartphone erhalten. Er soll eine Distanz und einen Winkel zwischen diesen GPS-Koordinaten und denen des sich an Bord befindenden Sensors errechnen. Über den Kompass soll er stets die eigene Ausrichtung kennen und den errechneten Winkel in Relation setzen. Durch kontinuierliche Wiederholung dieses Prozesses soll der Roboter in der Lage sein, sich dem Smartphone anzunähern.\\
 \\
@@ -32,7 +31,7 @@ Davon unabhängig soll sich die Kühlbox von der Batterie aus mit Strom versorge
 \begin{table}[H]
     \centering
     \caption{Use-Case Übersicht}
-    \label{tab:my-table}
+    \label{tab:Use-Case}
     \resizebox{\textwidth}{!}{%
     \begin{tabular}{|l|l|l|}
     \hline
@@ -60,4 +59,4 @@ Mit Bezug auf die Bedienbarkeit soll das ganze System intuitiv bedienbar sein.\\
 \\
 Bei der Leistung soll mit vollgeladenem Akku der Roboter 3 Stunden kühlen und eine Stunde fahren können.\\
 \\
-In Betrachtung der Sicherheit und Zuverlässigkeit ist Sämtliche Elektronik-Komponenten vor Witterung, Sonneneinstrahlung und Überhitzung geschützt. Stromschläge werden dadurch vermieden, dass nur Niederspannungs-Komponenten ohne Schwierigkeiten mit blossen Fingern erreichbar sein sollen. Ein Hauptschalter soll ausserdem in der Lage sein die Stromzufuhr zum gesamten System zu unterbrechen.
+In Betrachtung der Sicherheit und Zuverlässigkeit sind sämtliche Elektronikkomponenten vor Witterung, Sonneneinstrahlung und Überhitzung geschützt. Stromschläge werden dadurch vermieden, dass nur Niederspannungskomponenten ohne Schwierigkeiten mit blossen Fingern erreichbar sein sollen. Ein Hauptschalter soll ausserdem in der Lage sein, die Stromzufuhr zum gesamten System zu unterbrechen.

@@ -12,12 +12,11 @@
 \author{Semesterarbeit}    %Document Type => Technical Report, ...
 \date{Muttenz, Januar 2023}               %Place and Date
 
-\addbibresource{ref.bib}
 \begin{document}
 
 \pagenumbering{roman}	
 
-%%---TITLEPAGE---------------------------------------------------------------------------
+%%---TITLEPAGE------------------------------------------------------
 \selectlanguage{ngerman}                  %ngerman or english
 \maketitle
 
@@ -25,7 +24,7 @@
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=6cm]{Robo_fertig.jpg}
+\includegraphics[width=8cm]{Robo_fertig.jpg}
 \end{figure}
 
 \vfill
@@ -65,6 +64,8 @@ Fachbetreuer            &    Silvan Wirth\\[2ex]
 %%---TEXT--------------------------------------------------------------------
 \pagestyle{plain}
 \pagenumbering{arabic}
+\nocite{*}
+
 \include{sections/03_einleitung}
 \include{sections/04_Aufgabenanalyse}
 \include{sections/05_Zielformulierung}
@@ -80,10 +81,10 @@ Fachbetreuer            &    Silvan Wirth\\[2ex]
 \include{sections/17_Benutzerinterface}
 \include{sections/18_Schluss}
 
-\nocite{*}
-
 %%---BIBLIOGRAPHY-------------------------------------------------------
-
+{\sloppypar
+\printbibliography[heading=bibintoc, title=Quellenverzeichnis]
+}
 
 %%---APPENDIX----------------------------------------------------------
 \include{sections/98_Ehrlichkeit}
