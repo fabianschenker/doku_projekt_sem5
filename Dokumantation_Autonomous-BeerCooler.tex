@@ -6,13 +6,13 @@
 %\usepackage[style=ieee,urldate=comp,backend=biber]{biblatex}
 \usepackage[style=apa,urldate=comp,backend=biber]{biblatex}
 %%%%%
-
-\addbibresource{literature/beispiel_bib.bib}
+\addbibresource{literature/ref.bib}
 											
 \title{Autonomous Beer-Cooler}  %Project Title
 \author{Semesterarbeit}    %Document Type => Technical Report, ...
 \date{Muttenz, Januar 2023}               %Place and Date
 
+\addbibresource{ref.bib}
 \begin{document}
 
 \pagenumbering{roman}	
@@ -60,8 +60,6 @@ Fachbetreuer            &    Silvan Wirth\\[2ex]
 \selectlanguage{ngerman}				%ngerman or english
 \tableofcontents
 
-\listoffigures
-\listoftables
 \clearpage
 
 %%---TEXT--------------------------------------------------------------------
@@ -82,10 +80,10 @@ Fachbetreuer            &    Silvan Wirth\\[2ex]
 \include{sections/17_Benutzerinterface}
 \include{sections/18_Schluss}
 
+\nocite{*}
+
 %%---BIBLIOGRAPHY-------------------------------------------------------
-{\sloppypar
-\printbibliography[heading=bibintoc, title=Quellenverzeichnis]
-}
+
 
 %%---APPENDIX----------------------------------------------------------
 \include{sections/98_Ehrlichkeit}
